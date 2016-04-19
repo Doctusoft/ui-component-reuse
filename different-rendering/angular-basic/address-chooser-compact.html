@@ -1,0 +1,7 @@
+<div class="address-chooser-compact">
+    <select ng-model="ctrl.address.country" class="input-mini">
+        <option ng-repeat="country in ctrl.countryOptions" value="country.id">{{country.id}}</option>
+    </select>
+    <input class="input-small" type="text" ng-model="ctrl.address.postCode" ng-change="ctrl.handlePostCodeChange()">
+    <input class="input-small" type="text" ng-model="ctrl.address.city" ng-change="ctrl.handleCityChange()">
+</div>

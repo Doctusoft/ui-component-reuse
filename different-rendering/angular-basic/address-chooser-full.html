@@ -1,0 +1,22 @@
+<div class="address-chooser-full">
+    <div class="control-group">
+        <label class="control-label">Country</label>
+        <div class="controls">
+            <select ng-model="ctrl.address.country">
+                <option ng-repeat="country in ctrl.countryOptions" value="country.id">{{country.name}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">Postcode</label>
+        <div class="controls">
+            <input type="text" class="input-medium" ng-model="ctrl.address.postCode" ng-change="ctrl.handlePostCodeChange()">
+        </div>
+    </div>
+    <div class="control-group">
+        <label class="control-label">City</label>
+        <div class="controls">
+            <input type="text" class="input-medium" ng-model="ctrl.address.city" ng-change="ctrl.handleCityChange()">
+        </div>
+    </div>
+</div>
