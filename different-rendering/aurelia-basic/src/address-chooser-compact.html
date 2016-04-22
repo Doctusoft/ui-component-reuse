@@ -1,0 +1,9 @@
+<template>
+    <div class="address-chooser-compact">
+        <select value.bind="ctrl.address.country" class="input-mini">
+            <option repeat.for="country of countryOptions" value.bind="country.id">${country.id}</option>
+        </select>
+        <input class="input-small" type="text" value.bind="address.postCode" input.delegate="handlePostCodeChange()">
+        <input class="input-small" type="text" value.bind="address.city" input.delegate="handleCityChange()">
+    </div>
+</template>
